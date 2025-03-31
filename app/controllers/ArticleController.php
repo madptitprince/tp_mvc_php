@@ -1,14 +1,27 @@
 <?php
 require_once __DIR__ . '/../models/Article.php';
+require_once __DIR__ . '/../core/View.php';
 
 class ArticleController {
     public function index() {
         $articles = Article::findAll();
-        require_once __DIR__ . '/../views/article/index.php';
+        View::render('article/index', [
+            'pageTitle' => 'Catalogue d\'articles',
+            'articles' => $articles
+        ]);
     }
 
     public function show($id) {
         $article = Article::findById($id);
-        require_once __DIR__ . '/../views/article/show.php';
+        if (!$article) {
+            View::setData('flashMessage', 'Article non trouvé');
+            View::setData('flashMessageType', 'danger');
+            $this->index();
+            return;
+        }
+        View::render('article/show', [
+            'pageTitle' => $article->nom,
+            'article' => $article
+        ]);
     }
 }

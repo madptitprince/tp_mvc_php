@@ -1,0 +1,136 @@
+/* Custom Styles */
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --background-color: #f8f9fa;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: #2980b9;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: #2980b9;
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+    border-color: #27ae60;
+}
+
+.btn-danger {
+    background-color: var(--accent-color);
+    border-color: #c0392b;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.header-action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-icon i {
+    margin-right: 0.5rem;
+}
+
+/* Card dashboard styles */
+.dashboard-card {
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.dashboard-card.card-clients {
+    border-color: var(--primary-color);
+}
+
+.dashboard-card.card-commandes {
+    border-color: var(--secondary-color);
+}
+
+.dashboard-card.card-articles {
+    border-color: var(--accent-color);
+}
+
+.dashboard-icon {
+    font-size: 3rem;
+    opacity: 0.6;
+}
+
+/* Form styling */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Detail view */
+.detail-header {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.detail-header h1 {
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.detail-meta {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.badge-status {
+    font-size: 0.8rem;
+    padding: 0.4em 0.8em;
+}
